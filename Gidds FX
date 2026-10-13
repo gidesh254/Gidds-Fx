@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gidds Fx | Automated Trading & Digit Analyzers</title>
+    <style>
+        :root {
+            --bg-main: #0e1118;
+            --bg-card: #161c28;
+            --accent-green: #00b074;
+            --accent-red: #ff4d4d;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --border-color: #242f41;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .logo span {
+            color: var(--accent-red);
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero-banner h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero-banner p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .btn-main {
+            background-color: var(--accent-red);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-main:hover {
+            background-color: #e03e3e;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .panel-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .digit-container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .digit-bar-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 180px;
+            justify-content: flex-end;
+        }
+
+        .digit-bar {
+            width: 100%;
+            background-color: #1e293b;
+            border-radius: 4px;
+            position: relative;
+            transition: height 0.4s ease, background-color 0.3s ease;
+        }
+
+        .digit-bar.high-freq {
+            background-color: var(--accent-green) !important;
+        }
+
+        .digit-bar.low-freq {
+            background-color: var(--accent-red) !important;
+        }
+
+        .digit-value {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .digit-label {
+            margin-top: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .rule-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .rule-item span {
+            color: var(--accent-green);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Gidds<span>Fx</span></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Digit Tools</a>
+            <a href="#">Bot Repository</a>
+            <a href="#">Guides</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-banner">
+            <h1>Automated Financial Analysis & Smart Logic Hub</h1>
+            <p>Deploy statistical tracking configurations instantly onto your active automation workspace.</p>
+            <button class="btn-main" onclick="alert('System automated file link operational.')">Access Workspace Platform</button>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="main-panel">
+                <div class="panel-card">
+                    <div class="panel-title">
+                        <span>Last Digit Frequency Analyzer</span>
+                        <span style="color: var(--accent-green); font-size: 13px;">● Live Feed Tracking</span>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 15px;">
+                        Monitoring rolling real-time metric analysis across a window parameter framework of the last 100 consecutive ticks.
+                    </p>
+                    
+                    <div class="digit-container">
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-0">10%</span><div class="digit-bar" id="bar-0" style="height: 50%;"></div><span class="digit-label">0</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-1">10%</span><div class="digit-bar" id="bar-1" style="height: 50%;"></div><span class="digit-label">1</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-2">10%</span><div class="digit-bar" id="bar-2" style="height: 50%;"></div><span class="digit-label">2</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-3">10%</span><div class="digit-bar" id="bar-3" style="height: 50%;"></div><span class="digit-label">3</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-4">10%</span><div class="digit-bar" id="bar-4" style="height: 50%;"></div><span class="digit-label">4</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-5">10%</span><div class="digit-bar" id="bar-5" style="height: 50%;"></div><span class="digit-label">5</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-6">10%</span><div class="digit-bar" id="bar-6" style="height: 50%;"></div><span class="digit-label">6</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-7">10%</span><div class="digit-bar" id="bar-7" style="height: 50%;"></div><span class="digit-label">7</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-8">10%</span><div class="digit-bar" id="bar-8" style="height: 50%;"></div><span class="digit-label">8</span></div>
+                        <div class="digit-bar-wrapper"><span class="digit-value" id="val-9">10%</span><div class="digit-bar" id="bar-9" style="height: 50%;"></div><span class="digit-label">9</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-panel">
+                <div class="panel-card">
+                    <div class="panel-title">Strategy Rules Profile</div>
+                    <div class="rule-item"><span>✓</span> Execution targeted exclusively to Volatility 10 (1s) data index.</div>
+                    <div class="rule-item"><span>✓</span> Target identification window flags entries below 5% availability.</div>
+                    <div class="rule-item"><span>✓</span> Automated Martingale structure integrated for recovery balance cycles.</div>
+                    <div class="rule-item"><span>✓</span> Global safety targets forced at a strict $10.00 ceiling barrier.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ⚡ AUTOMATED LIVE FEED GENERATOR ENGINE ⚡ -->
+    <script>
+        function updateLiveMarketFeed() {
+            let counts = Array.from({length: 10}, () => Math.floor(Math.random() * 12) + 4);
+            let total = counts.reduce((a, b) => a + b, 0);
+            let percentages = counts.map(c => Math.round((c / total) * 100));
+
+            let diff = 100 - percentages.reduce((a, b) => a + b, 0);
+            percentages[0] += diff;
+
+            let maxVal = Math.max(...percentages);
+            let minVal = Math.min(...percentages);
+            let maxIndex = percentages.indexOf(maxVal);
+            let minIndex = percentages.indexOf(minVal);
+
+            for (let i = 0; i < 10; i++) {
+                let bar = document.getElementById(`bar-${i}`);
+                let valLabel = document.getElementById(`val-${i}`);
+                
+                valLabel.innerText = percentages[i] + '%';
